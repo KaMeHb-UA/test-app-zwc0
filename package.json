@@ -6,7 +6,7 @@
     },
     "type": "module",
     "module": "src/index.js",
-    "distFile": "dist/app.js",
+    "distFile": "dist/index.js",
     "devDependencies": {
         "esbuild": "^0.14.38"
     }
