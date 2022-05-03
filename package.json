@@ -8,6 +8,7 @@
     "module": "src/index.js",
     "distFile": "dist/index.js",
     "devDependencies": {
+        "@types/node": "^17.0.31",
         "esbuild": "^0.14.38"
     }
 }
