@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"baseUrl": "./",
+		"allowJs": true,
+		"outDir": "./tsc-dist",
+		"target": "esnext",
+		"checkJs": true,
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"paths": {
+			"@/*": ["src/*"],
+		},
+	},
+	"include": [
+		"src/**/*",
+	],
+	"exclude": [
+		"node_modules/*",
+		"doc/*",
+		"dist/*",
+	],
+}

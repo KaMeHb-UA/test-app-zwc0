@@ -1,0 +1,13 @@
+{
+    "private": true,
+    "scripts": {
+        "build": "node build",
+        "cleanup": "git clean -dfX"
+    },
+    "type": "module",
+    "module": "src/index.js",
+    "distFile": "dist/app.js",
+    "devDependencies": {
+        "esbuild": "^0.14.38"
+    }
+}
