@@ -57,18 +57,22 @@ const doneSymbol = '✅';
 const errorSymbol = '❌';
 const printingQueue = new Set();
 
+function bold(text){
+    return `[1m${text}[0m`;
+}
+
 async function printTable(cleanup = true){
     await Promise.all(printingQueue);
     if(cleanup) await clearConsole(tests.length);
     for(const test of tests){
         if(typeof test.then === 'function'){
-            await log(stdout, `${progressSymbol} ${test.name}...`);
+            await log(stdout, `${progressSymbol} ${bold(test.name)}...`);
         } else if(typeof test.error !== 'undefined'){
-            await log(stdout, `${errorSymbol} ${test.name} failed in ${test.result}ms`);
+            await log(stdout, `${errorSymbol} ${bold(test.name)} failed in ${test.result}ms`);
             await log(stderr, test.error.stack);
             exit(1);
         } else {
-            await log(stdout, `${doneSymbol} ${test.name} done in ${test.result}ms`);
+            await log(stdout, `${doneSymbol} ${bold(test.name)} done in ${test.result}ms`);
         }
     }
 }
