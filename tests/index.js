@@ -1,8 +1,12 @@
 import { stdout, stderr, exit } from 'process';
 import rawTests from './all.js';
 
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
 function createTest(name, func){
     const res = async () => {
+        // defer test execution to the next process tick to ensure console is prepared for output
+        await sleep();
         const start = Date.now();
         try{
             await func();
