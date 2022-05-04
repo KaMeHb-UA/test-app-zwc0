@@ -48,7 +48,7 @@ async function log(stream, data){
 
 let currentPSymI = 0;
 const progressSymbols = '⣷⣯⣟⡿⢿⣻⣽⣾';
-let progressSymbol = '⏳';
+let progressSymbol = progressSymbols[currentPSymI];
 const doneSymbol = '✅';
 const errorSymbol = '❌';
 const printingQueue = new Set();
