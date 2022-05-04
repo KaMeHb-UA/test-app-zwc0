@@ -4,8 +4,8 @@ import { strict as assert } from 'assert';
 
 export const name = 'Run with random values';
 
-const lowest = { data: Symbol(), cena: 10 },
-    highest = { data: Symbol(), cena: 10000 };
+const lowest = { data: '1969-01-01', cena: 10 },
+    highest = { data: '2023-01-01', cena: 10000 };
 
 function rand(min, max) {
     return Math.random() * (max - min) + min;
